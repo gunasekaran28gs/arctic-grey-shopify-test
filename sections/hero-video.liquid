@@ -1,0 +1,69 @@
+<style>
+        .video-container {
+          position: relative;
+          width: 100%;
+          height: 100vh;  /* Full height of the viewport */
+          overflow: hidden;  /* Hide any part of the video outside the container */
+        }
+    
+        /* Video element styling */
+        video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);  /* Center the video */
+          min-width: 100%;  /* Ensure the video stretches to at least the full width */
+          min-height: 100%; /* Ensure the video stretches to at least the full height */
+          object-fit: cover;  /* Cover the container, maintaining aspect ratio */
+        }
+    
+        /* Optional: Add overlay content above the video */
+        .content {
+          position: absolute;
+          max-width: 840px;
+          left: 40px;
+          bottom: 60px;
+          color: white;
+          font-size: 2rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .content h1{
+            font-family: Rubik;
+            font-size: 70px;
+            font-weight: 600;
+            line-height: 82.95px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+    
+        }
+      </style>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="https://cdn.shopify.com/videos/c/o/v/1d371874dcbe4bf9bd0b14fa72b886d4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <h1>Great things never came from comfort zones.</h1>
+    </div>
+  </div>
+
+  {% schema %}
+    {
+      "name": "Hero Video",
+      "tag": "section",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+        
+      ],
+      "presets": [
+        {
+          "name": "Hero Video",
+        }
+      ]
+    }
+    {% endschema %}
+    
