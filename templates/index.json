@@ -13,21 +13,6 @@
       "type": "hero-video",
       "settings": {}
     },
-    "video_APbDDh": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/-f1d3-45a4-a2a8-c462f7e5812d.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -59,7 +44,6 @@
   },
   "order": [
     "hero_video_x8h4Rx",
-    "video_APbDDh",
     "featured_collection"
   ]
 }
