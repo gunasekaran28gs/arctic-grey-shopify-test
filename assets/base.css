@@ -1272,7 +1272,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button--secondary:after {
-  --border-opacity: var(--buttons-border-opacity);
+  --border-opacity: 0;
 }
 
 .button:focus-visible,
@@ -3614,6 +3614,9 @@ header {
   background-color: white;
   border-radius: 8px;
 }
+.header {
+  height: 70px;
+}
 @media screen and (min-width: 990px) {
   .header {
       padding-top: 0px;
@@ -3627,6 +3630,9 @@ header {
   }
 }
 @media screen and (max-width: 768px){
+  .header{
+    height: auto;
+  }
   .header-sticky_bar{
     position: unset;
   }
@@ -3636,7 +3642,5 @@ header {
   align-items: center;
   gap: 30px;
 }
-.header {
-  height: 70px;
-}
+
 

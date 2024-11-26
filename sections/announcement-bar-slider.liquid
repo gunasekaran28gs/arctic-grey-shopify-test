@@ -3,27 +3,25 @@
     
   <style>
   
-  .announcement-bar-slide{
-    margin: 1rem;
-  }
-  .announcement-bar-slide{
-    margin: 0.2rem;
-    
-  }
   #announcement-bar-slide{
-    background-color: #FFAF38;
+    padding: 10px 0;
+    background-color: #000000;
+    overflow: hidden;
   }
   .announcement-bar-slider-item .slider-dots{
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
+   
   }
   .announcement-bar-slider-item p{
       padding: 5px 50px;
-      
+      color: white;
+      font-family: Rubik;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16.59px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
   }
   .announcement-bar-slider-item p{
       font-size: 14px;
@@ -37,46 +35,46 @@
   <div id="announcement-bar-slide">
     <div class="announcement-bar-slider-item">
         <div class="announcement-bar-slider-content">
-            <div class="slider-dots"></div>
+            <div class="slider-dots">{{'icon-star.svg' | inline_asset_content }}</div>
             <p>High Quality Ingredients</p>
         </div>
     </div>
     <div class="announcement-bar-slider-item">
         <div class="announcement-bar-slider-content">
-            <div class="slider-dots"></div>
+          <div class="slider-dots">{{'icon-star.svg' | inline_asset_content }}</div>
             <p>Independently Certified</p>
         </div>
     </div>
     <div class="announcement-bar-slider-item">
         <div class="announcement-bar-slider-content">
-            <div class="slider-dots"></div>
+          <div class="slider-dots">{{'icon-star.svg' | inline_asset_content }}</div>
             <p>Expert Driven</p>
         </div>
     </div>
     <div class="announcement-bar-slider-item">
         <div class="announcement-bar-slider-content">
-            <div class="slider-dots"></div>
+          <div class="slider-dots">{{'icon-star.svg' | inline_asset_content }}</div>
             <p>Shipped Internationally</p>
         </div>
     </div>
     
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
       <script id="rendered-js" >
 $('#announcement-bar-slide').slick({
-  slidesToScroll: 1,
-  infinite: true,
-  draggable: false,
-  autoplay: true,
-  autoplaySpeed: 0,
-  speed: 5000,
-  pauseOnHover: false,
-  variableWidth: true,
-  cssEase: 'linear' ,
-  pauseOnFocus: false,
-  pauseOnHover: false,
- pauseOnDotsHover: false,
+  infinite: true,          // Enable infinite looping
+            variableWidth: true,
+            slidesToShow: 1,   
+            infinite: true,      // Show one slide at a time
+            slidesToScroll: 1,       // Scroll one slide at a time
+            speed: 8000,             // Speed of scroll (milliseconds)
+            autoplay: true,          // Enable autoplay
+            autoplaySpeed: 0,        // Speed of autoplay (0 means no delay between slides)
+            arrows: false,           // Hide arrows
+            dots: false,             // Hide dots
+            cssEase: 'linear',       // Smooth and continuous animation
+            pauseOnHover: false,
+            centerMode: false,
 });
     </script>
 
