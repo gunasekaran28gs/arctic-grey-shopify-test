@@ -2775,7 +2775,7 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    display: block;
+    display: flex;
   }
 
   .header--top-center .header__inline-menu {
@@ -3604,11 +3604,13 @@ details-disclosure > details {
 /* custom css */
 
 /* Header CSS */
-header {
+.header-sticky_bar{
   position: absolute;
   top: 20px;
   left: 40px;
   right: 40px;
+}
+header {
   background-color: white;
   border-radius: 8px;
 }
@@ -3619,6 +3621,17 @@ header {
   }
 }
 
+@media screen and (max-width: 990px){
+  .header-nav_button{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .header-sticky_bar{
+    position: unset;
+  }
+}
+
 .list-menu--inline{
   align-items: center;
   gap: 30px;
@@ -3626,3 +3639,4 @@ header {
 .header {
   height: 70px;
 }
+

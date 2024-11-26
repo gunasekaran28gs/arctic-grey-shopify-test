@@ -37,6 +37,23 @@
             text-decoration-skip-ink: none;
             color: white;
         }
+        @media screen and (max-width: 768px){
+            .video-container{
+                height: 60vh;
+            }
+            .content {
+                left: 50%;
+                width: 80%;
+                text-align: center;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .content h1{
+                font-size: 36px;
+                line-height: 44px;
+                text-align: center;
+            }
+        }
       </style>
   <div class="video-container">
     <video autoplay muted loop>
@@ -62,7 +79,7 @@
       ],
       "presets": [
         {
-          "name": "Hero Video",
+          "name": "Hero Video"
         }
       ]
     }
