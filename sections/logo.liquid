@@ -129,41 +129,16 @@
         </div>
     </div>
 
-    {% schema %}
-        {
-          "name": "Logo list",
-          "max_blocks": 12,
-          "class": "announcement-bar-section",
-          "enabled_on": {
-            "templates": ["*"],
-            "groups": ["header"]
-          },
-          "settings": [
-            {
-              "type": "color_scheme",
-              "id": "color_scheme",
-              "label": "t:sections.all.colors.label",
-              "default": "scheme-4"
-            }
-        ],
-        "blocks": [
-            {
-            "type": "logo",
-            "name": "Logo",
-            "settings": [
-               
-            ]
-            }
+{% schema %}
+{
+    "name": "Logo list",
+    "settings": [
+        
         ],
         "presets": [
             {
-            "name": "Logo list",
-            "blocks": [
-                {
-                "type": "logo"
-                }
-            ]
+                "name": "Logo list"
             }
         ]
-
-    }
+}
+{% endschema %}
