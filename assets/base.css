@@ -3645,4 +3645,21 @@ header {
 div:empty{
   display: block;
 }
-
+.body{
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.96px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.section-title{
+  font-family: Rubik;
+font-size: 40px;
+font-weight: 500;
+line-height: 47.4px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
