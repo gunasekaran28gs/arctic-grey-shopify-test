@@ -3659,10 +3659,16 @@ p, h4{
 .section-title{
   font-family: Rubik;
   margin: 10px;
-font-size: 40px;
-font-weight: 600;
-color: #1B1F23;
-line-height: 47.4px;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+  font-size: 40px;
+  font-weight: 600;
+  color: #1B1F23;
+  line-height: 47.4px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+@media screen and (max-width: 768px){
+  .section-title{
+    font-size: 30px;
+    line-height: 38px;
+  } 
 }
