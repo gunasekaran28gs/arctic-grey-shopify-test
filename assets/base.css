@@ -3642,5 +3642,7 @@ header {
   align-items: center;
   gap: 30px;
 }
-
+div:empty{
+  display: block;
+}
 
