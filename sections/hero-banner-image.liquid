@@ -1,0 +1,75 @@
+    <div class="ag-hero-banner-section-wrapper page-width">
+        <div class="ag-hero-banner-section-container">
+            <div class="ag-hero-banner-image">
+                <img src="{{ section.settings.image.src |  image_url: width: 1400  }}" width="" height="" alt="{{ section.settings.image.alt }}">
+            </div>
+            <div class="hero-banner-overlay"></div>
+            <div class="ag-hero-banner-content">
+                <h2 class="section-title">{{ section.settings.title }}</h2>
+                <p class="section-description">{{ section.settings.description }}</p>
+                <div class="ag-hero-banner-button-container">
+                    <a href="{{section.settings.link-1}}"><button class="button button--primary">{{ section.settings.button-text-1 }}</button></a>
+                    <a href="{{section.settings.link-2}}"><button class="button button--outline">{{ section.settings.button-text-2 }}</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% schema %}
+        {
+            "name": "Logo List",
+            "tag": "section",
+            "class": "section",
+            "disabled_on": {
+                "groups": ["header", "footer"]
+            },
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Hero Banner Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description Text",
+                    "default": "Welcome to my shop!"
+                },
+                {
+                    "type": "text",
+                    "id": "button-text-1",
+                    "label": "Button 1 Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "url",
+                    "id": "link-1",
+                    "label": "Button 1 Link"
+                },
+                {
+                    "type": "text",
+                    "id": "button-text-2",
+                    "label": "Button 2 Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "url",
+                    "id": "link-2",
+                    "label": "Button 2 Link"
+                }
+                
+                
+            ],
+            
+            "presets": [
+                {
+                    "name": "Log List"
+                }
+            ]
+        }
+        {% endschema %}

@@ -3798,3 +3798,55 @@ p.column-text{
 }
 
 /* Features List section end */
+
+/* Hero Banner Image start */
+.ag-hero-banner-section-container{
+  position: relative;
+}
+.ag-hero-banner-image {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.ag-hero-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all .3s ease;
+}
+.hero-banner-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000066;
+  border-radius: 8px;
+}
+.ag-hero-banner-content{
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translate(0, -50%);
+  z-index: 11111;
+  
+}
+.ag-hero-banner-content h2, .ag-hero-banner-content p{
+  color: white;
+}
+@media screen and (max-width: 768px){
+  .ag-hero-banner-image {
+      height: 350px;
+  }
+  .ag-hero-banner-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 11111;
+      text-align: center;
+}
+}
+/* Hero Banner Image end */
