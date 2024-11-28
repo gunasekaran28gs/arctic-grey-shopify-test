@@ -43,7 +43,24 @@
     },
     "deals_image_Vxe6iK": {
       "type": "deals-image",
-      "settings": {}
+      "blocks": {
+        "image_RpLD4E": {
+          "type": "image",
+          "settings": {
+            "title": "Title Here",
+            "description": "Welcome to my shop!",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RpLD4E"
+      ],
+      "settings": {
+        "subtitle": "Sub Heading",
+        "title": "Title Here",
+        "description": "Welcome to my shop!"
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
