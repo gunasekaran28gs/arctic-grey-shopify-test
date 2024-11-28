@@ -83,8 +83,9 @@
         "image_AFjUb4": {
           "type": "image",
           "settings": {
-            "title": "Title Here",
-            "description": "Welcome to my shop!",
+            "image": "shopify://shop_images/hormone-support.png",
+            "title": "Hormone Support",
+            "description": "Boost your mood, libido, and vitality",
             "link": ""
           }
         }
