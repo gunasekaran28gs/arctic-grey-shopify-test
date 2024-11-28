@@ -47,6 +47,41 @@
         "image_RpLD4E": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/sleep.png",
+            "title": "Sleep",
+            "description": "Optimize your sleep patterns. ",
+            "link": ""
+          }
+        },
+        "image_PbDKLK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cognitive-function.png",
+            "title": "Cognitive Function",
+            "description": "Enhance your brain's performance and connectivity",
+            "link": ""
+          }
+        },
+        "image_TA87ad": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/foundation.png",
+            "title": "Foundational Health",
+            "description": "Promoting healthy, natural deep sleep day to day",
+            "link": ""
+          }
+        },
+        "image_7G4Vjx": {
+          "type": "image",
+          "settings": {
+            "title": "Title Here",
+            "description": "Welcome to my shop!",
+            "link": ""
+          }
+        },
+        "image_AFjUb4": {
+          "type": "image",
+          "settings": {
             "title": "Title Here",
             "description": "Welcome to my shop!",
             "link": ""
@@ -54,12 +89,16 @@
         }
       },
       "block_order": [
-        "image_RpLD4E"
+        "image_RpLD4E",
+        "image_PbDKLK",
+        "image_TA87ad",
+        "image_7G4Vjx",
+        "image_AFjUb4"
       ],
       "settings": {
-        "subtitle": "Sub Heading",
-        "title": "Title Here",
-        "description": "Welcome to my shop!"
+        "subtitle": "COMFORTABLY UNCOMFORTABLE",
+        "title": "Start with your Goals",
+        "description": "We cannot become what we want to be by remaining what we are."
       }
     },
     "featured_collection": {
