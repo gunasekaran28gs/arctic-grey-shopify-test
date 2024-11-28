@@ -85,6 +85,24 @@
           "settings": {
             "image": "shopify://shop_images/list-icon-5.png"
           }
+        },
+        "logo_MFtpMP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-6.png"
+          }
+        },
+        "logo_9LRKUy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-1.png"
+          }
+        },
+        "logo_ptAGri": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-2.png"
+          }
         }
       },
       "block_order": [
@@ -92,7 +110,10 @@
         "logo_gwX4HQ",
         "logo_aNDYEM",
         "logo_PEzDgV",
-        "logo_VXKHB4"
+        "logo_VXKHB4",
+        "logo_MFtpMP",
+        "logo_9LRKUy",
+        "logo_ptAGri"
       ],
       "settings": {
         "button-text": "#1 Doctor Recommended",
