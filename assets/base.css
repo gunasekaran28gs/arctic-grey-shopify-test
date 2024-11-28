@@ -3831,7 +3831,13 @@ p.column-text{
   left: 50px;
   transform: translate(0, -50%);
   z-index: 11111;
-  
+  display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.ag-hero-banner-button-container {
+  display: flex;
+  gap: 12px;
 }
 .ag-hero-banner-content h2, .ag-hero-banner-content p{
   color: white;
@@ -3841,6 +3847,7 @@ p.column-text{
       height: 350px;
   }
   .ag-hero-banner-content{
+      width: 80%;
       position: absolute;
       top: 50%;
       left: 50%;
