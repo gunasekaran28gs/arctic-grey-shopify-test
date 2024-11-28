@@ -55,7 +55,50 @@
     },
     "logo_EjNpKA": {
       "type": "logo",
-      "settings": {}
+      "blocks": {
+        "logo_WRBbU7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-1.png"
+          }
+        },
+        "logo_gwX4HQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-2.png"
+          }
+        },
+        "logo_aNDYEM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-3.png"
+          }
+        },
+        "logo_PEzDgV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-4.png"
+          }
+        },
+        "logo_VXKHB4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/list-icon-5.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_WRBbU7",
+        "logo_gwX4HQ",
+        "logo_aNDYEM",
+        "logo_PEzDgV",
+        "logo_VXKHB4"
+      ],
+      "settings": {
+        "button-text": "#1 Doctor Recommended",
+        "rating-text": "12,000+ 5-star Reviews",
+        "description": "Welcome to my shop!"
+      }
     },
     "deals_image_Vxe6iK": {
       "type": "deals-image",
