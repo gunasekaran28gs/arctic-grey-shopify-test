@@ -5,9 +5,13 @@
                 <h2 class="section-title">{{ section.settings.title }}</h2>
                 <p class="section-description">{{ section.settings.description }}</p>
             </div>
-            <div class="ag-goals-section-image-container">
+            <div class="ag-goals-section-image-container {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {%for block in section.blocks%}
-                    <div class="ag-goals-image-list-item">
+                    <div class="ag-goals-image-list-item" {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                      >
                         <div class="ag-goals-image-container">
                             {% if block.settings.image != blank%}
                                 <img src="{{ block.settings.image.src |  image_url: width: 400  }}" width="" height="" alt="{{ block.settings.image.alt }}"/>
@@ -29,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                {%endfor%}
+                {% endfor %}
 
                 
             </div>
