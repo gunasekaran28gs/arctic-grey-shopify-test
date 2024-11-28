@@ -51,6 +51,9 @@
             background-color: #1B1F231A;
             line-height: normal;
         }
+        .ag-star-rating-text{
+            line-height: normal;
+        }
         @media screen and (max-width: 768px){
             .ag-logo-list-wrapper{
                 padding: 15px;
@@ -84,7 +87,7 @@
     <div class="ag-logo-list-wrapper">
         <div class="ag-logo-list-container">
             <div class="ag-logo-list-content">
-                <button class="ag-recommend-text">#1 Doctor Recommended</button>
+                <button class="ag-recommend-text">{{ section.settings.button-text }}</button>
                 <div class="ag-star-rating">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 100 20" fill="none">
@@ -95,51 +98,81 @@
                             <path d="M90.0008 15.217L84.123 18.5072L85.4357 11.9002L80.4902 7.32683L87.1794 6.53371L90.0008 0.416992L92.8222 6.53371L99.5113 7.32683L94.5659 11.9002L95.8787 18.5072L90.0008 15.217Z" fill="#F5BD41"/>
                         </svg>
                     </div>
-                    <div>
-                        12,000+ 5-star Reviews
+                    <div class="ag-star-rating-text">
+                        {{ section.settings.rating-text }}
                     </div>
                 </div>
             </div>
             <div class="ag-logo-list-border"></div>
             <div class="ag-logo-list-section">
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-6.png?v=1732644971" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div>
-                <div class="ag-logo-list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/list-icon-1.png?v=1732644419" alt="">
-                </div> 
+                {% for block in section.blocks %}
+                    <div class="ag-logo-list-item">
+                        <img src="{{ block.settings.image.src |  image_url: width: 200 }}" width="" height="" alt="{{ block.settings.image.alt }}">
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 
-{% schema %}
-{
-    "name": "Logo list",
-    "settings": [
-        
-        ],
-        "presets": [
-            {
-                "name": "Logo list"
-            }
-        ]
-}
-{% endschema %}
+    {% schema %}
+        {
+            "name": "Logo List",
+            "tag": "section",
+            "class": "section",
+            "disabled_on": {
+                "groups": ["header", "footer"]
+            },
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "button-text",
+                    "label": "Button Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "text",
+                    "id": "rating-text",
+                    "label": "Rating Text",
+                    "default": "Rating Text"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description Text",
+                    "default": "Welcome to my shop!"
+                }
+            ],
+            "blocks": [
+                {
+                    "type": "logo",
+                    "name": "Logo",
+                    "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "image",
+                            "label": "Logo"
+                        }
+                    ]   
+                }
+            ],
+            "presets": [
+                {
+                    "name": "Log List",
+                    "blocks":[
+                        {
+                            "type": "logo"
+                        },
+                        {
+                            "type": "logo"
+                        },
+                        {
+                            "type": "logo"
+                        },
+                        {
+                            "type": "logo"
+                        },
+                    ]
+                }
+            ]
+        }
+        {% endschema %}
