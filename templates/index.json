@@ -258,6 +258,18 @@
         "title": "Clean Supplements - <br>Made For You",
         "description": "Welcome to my shop!"
       }
+    },
+    "hero_banner_image_cJd9Ma": {
+      "type": "hero-banner-image",
+      "settings": {
+        "image": "shopify://shop_images/hero-banner-background.png",
+        "title": "The Next Generation is Here",
+        "description": "Innovative Engineering. Intelligent Design. Meet The Plunge All-I.",
+        "button-text-1": "Take The Plunge",
+        "link-1": "",
+        "button-text-2": "Dive Deeper",
+        "link-2": ""
+      }
     }
   },
   "order": [
@@ -266,6 +278,7 @@
     "logo_EjNpKA",
     "deals_image_Vxe6iK",
     "featured_collection",
-    "features_list_MgrBxe"
+    "features_list_MgrBxe",
+    "hero_banner_image_cJd9Ma"
   ]
 }
