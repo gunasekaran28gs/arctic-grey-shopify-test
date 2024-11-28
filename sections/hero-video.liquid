@@ -1,5 +1,5 @@
 <style>
-        .video-container {
+        .ag-hero-video-container {
           position: relative;
           width: 100%;
           height: 100vh;  /* Full height of the viewport */
@@ -7,7 +7,7 @@
         }
     
         /* Video element styling */
-        video {
+        .ag-hero-video-container video {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -18,7 +18,7 @@
         }
     
         /* Optional: Add overlay content above the video */
-        .content {
+        .ag-hero-video-content {
           position: absolute;
           max-width: 880px;
           left: 40px;
@@ -27,7 +27,7 @@
           font-size: 2rem;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .content h1{
+        .ag-hero-video-content h1{
             font-family: Rubik;
             font-size: 70px;
             font-weight: 600;
@@ -38,29 +38,29 @@
             color: white;
         }
         @media screen and (max-width: 768px){
-            .video-container{
+            .ag-hero-video-video-container{
                 height: 60vh;
             }
-            .content {
+            .ag-hero-video-content {
                 left: 50%;
                 width: 80%;
                 text-align: center;
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
-            .content h1{
+            .ag-hero-video-content h1{
                 font-size: 36px;
                 line-height: 44px;
                 text-align: center;
             }
         }
       </style>
-  <div class="video-container">
+  <div class="ag-hero-video-container">
     <video autoplay muted loop>
       <source src="https://cdn.shopify.com/videos/c/o/v/1d371874dcbe4bf9bd0b14fa72b886d4.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="content">
+    <div class="ag-hero-video-content">
       <h1>Great things never came from comfort zones.</h1>
       <button class="button button--secondary">Shop Now</button>
     </div>
