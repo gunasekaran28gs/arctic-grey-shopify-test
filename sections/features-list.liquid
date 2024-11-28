@@ -2,49 +2,23 @@
     <div class="ag-features-icon-section-wrapper">
         <div class="ag-features-icon-section-container">
             <div class="ag-features-icon-title-container">
-                <h4 class="section-subtitle">🧐 Why Health & Fitness</h4>
-                <h2 class="section-title">Clean Supplements - <br/>Made For You</h2>
+                <h4 class="section-subtitle">{{section.settings.subtitle}}</h4>
+                <h2 class="section-title">{{section.settings.title}}</h2>
                 <p class="section-description"></p>
             </div>
             <div class="ag-features-icon-list">
-                <div class="ag-features-icon-list-item">
-                    <div class="ag-features-icon-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/like-icon.svg?v=1732763359" alt="">
+                {%for block in section.blocks %}
+                    <div class="ag-features-icon-list-item">
+                        <div class="ag-features-icon-container">
+                            <img src="{{ block.settings.image.src |  image_url: width: 50  }}" width="" height="" alt="">
+                        </div>
+                        <div class="ag-features-text-container">
+                            <h4>{{ block.settings.title }}</h4>
+                            <p>{{ block.settings.description }}</p>
+                        </div>
                     </div>
-                    <div class="ag-features-text-container">
-                        <h4>We Make It Easy</h4>
-                        <p>Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More</p>
-                    </div>
-                </div>
-                <div class="ag-features-icon-list-item">
-                    <div class="ag-features-icon-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/like-icon.svg?v=1732763359" alt="">
-                    </div>
-                    <div class="ag-features-text-container">
-                        <h4>We Make It Easy</h4>
-                        <p>Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More</p>
-                    </div>
-                </div>
-                <div class="ag-features-icon-list-item">
-                    <div class="ag-features-icon-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/like-icon.svg?v=1732763359" alt="">
-                    </div>
-                    <div class="ag-features-text-container">
-                        <h4>We Make It Easy</h4>
-                        <p>Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More</p>
-                    </div>
-                </div>
-                <div class="ag-features-icon-list-item">
-                    <div class="ag-features-icon-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/like-icon.svg?v=1732763359" alt="">
-                    </div>
-                    <div class="ag-features-text-container">
-                        <h4>We Make It Easy</h4>
-                        <p>Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-
         </div>
     </div>
     {% schema %}
@@ -99,6 +73,25 @@
                     }
 
                 ]   
+            }
+        ],
+        "presets": [
+            {
+                "name": "Features List",
+                "blocks":[
+                    {
+                        "type": "feature"
+                    },
+                    {
+                        "type": "feature"
+                    },
+                    {
+                        "type": "feature"
+                    },
+                    {
+                        "type": "feature"
+                    },
+                ]
             }
         ]
     }
