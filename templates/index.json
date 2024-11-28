@@ -74,8 +74,9 @@
         "image_7G4Vjx": {
           "type": "image",
           "settings": {
-            "title": "Title Here",
-            "description": "Welcome to my shop!",
+            "image": "shopify://shop_images/athletic-performance.png",
+            "title": "Athletic Performance",
+            "description": "Increase your healthy tissue, muscle, and energy",
             "link": ""
           }
         },
