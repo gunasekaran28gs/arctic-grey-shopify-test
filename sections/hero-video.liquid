@@ -2,22 +2,18 @@
         .ag-hero-video-container {
           position: relative;
           width: 100%;
-          height: 60vh;  /* Full height of the viewport */
-          overflow: hidden;  /* Hide any part of the video outside the container */
+          height: 100vh;  
+          overflow: hidden;  
         }
-    
-        /* Video element styling */
         .ag-hero-video-container video {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);  /* Center the video */
-          min-width: 100%;  /* Ensure the video stretches to at least the full width */
-          min-height: 100%; /* Ensure the video stretches to at least the full height */
-          object-fit: cover;  /* Cover the container, maintaining aspect ratio */
+          transform: translate(-50%, -50%); 
+          min-width: 100%;  
+          min-height: 100%;
+          object-fit: cover; 
         }
-    
-        /* Optional: Add overlay content above the video */
         .ag-hero-video-content {
           position: absolute;
           max-width: 880px;
@@ -38,7 +34,7 @@
             color: white;
         }
         @media screen and (max-width: 768px){
-            .ag-hero-video-video-container{
+            .ag-hero-video-container{
                 height: 60vh;
             }
             .ag-hero-video-content {

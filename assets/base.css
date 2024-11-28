@@ -3672,3 +3672,127 @@ p, h4{
     line-height: 38px;
   } 
 }
+
+/* Deals Image section start*/
+.ag-goals-section-title-container{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.section-description{
+  max-width: 340px;
+  margin: 0 auto;
+  color: #1B1F23B2;
+}
+.ag-goals-section-image-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+}
+.ag-goals-image-list-item{
+  width: calc(20% - 20px);
+}
+.ag-goals-image-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.ag-goals-image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .3s ease;
+}
+.ag-goals-image-list-item:hover .ag-goals-image-container img{
+  transform: scale(1.05);
+}
+.ag-goals-image-content{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding:24px 0;
+}
+.ag-goals-image-content-text h4{
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 21.33px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.ag-goals-image-content-text p{
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.96px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.ag-goals-image-arrow-circle{
+  width: 37px;
+  height: 37px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ag-goals-image-arrow-circle{
+  transition: rotate 0.3s ease;
+}
+.ag-goals-image-list-item:hover .ag-goals-image-arrow-circle{
+  rotate: 45deg;
+}
+.ag-goals-image-arrow-circle:hover{
+  background-color: black;
+}
+.ag-goals-image-arrow-circle:hover svg path{
+  fill: white;
+} 
+.ag-goals-section-image-container::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .ag-goals-section-image-container{
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+  }
+  .ag-goals-image-list-item{
+      flex: 0 0 60%;
+      width: calc(20% - 20px);
+  }
+}
+
+/* Deals Image section end */
+
+/* Features list section start */
+.ag-features-icon-list{
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.ag-features-icon-list-item{
+  width: calc(25% - 25px);
+}
+.ag-features-icon-container{
+  width: 50px;
+  height: 50px;
+  background-color: #1B1F23;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px){
+  .ag-features-icon-list-item{
+      width: calc(50% - 16px);
+  }
+}
+
+/* Features List section end */
