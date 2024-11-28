@@ -41,6 +41,10 @@
       "type": "logo",
       "settings": {}
     },
+    "deals_image_Vxe6iK": {
+      "type": "deals-image",
+      "settings": {}
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -69,9 +73,50 @@
         "padding_bottom": 36
       }
     },
-    "deals_image_Vxe6iK": {
-      "type": "deals-image",
-      "settings": {}
+    "features_list_MgrBxe": {
+      "type": "features-list",
+      "blocks": {
+        "feature_n37Tqq": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/like-icon.svg",
+            "title": "We Make It Easy",
+            "description": "Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More"
+          }
+        },
+        "feature_nDz9Tn": {
+          "type": "feature",
+          "settings": {
+            "title": "Title Here",
+            "description": "Welcome to my shop!"
+          }
+        },
+        "feature_bPQdta": {
+          "type": "feature",
+          "settings": {
+            "title": "Title Here",
+            "description": "Welcome to my shop!"
+          }
+        },
+        "feature_hLKNai": {
+          "type": "feature",
+          "settings": {
+            "title": "Title Here",
+            "description": "Welcome to my shop!"
+          }
+        }
+      },
+      "block_order": [
+        "feature_n37Tqq",
+        "feature_nDz9Tn",
+        "feature_bPQdta",
+        "feature_hLKNai"
+      ],
+      "settings": {
+        "subtitle": "🧐 Why Health & Fitness",
+        "title": "Clean Supplements - <br>Made For You",
+        "description": "Welcome to my shop!"
+      }
     }
   },
   "order": [
@@ -79,6 +124,7 @@
     "announcement_bar_slider_abjE4Y",
     "logo_EjNpKA",
     "deals_image_Vxe6iK",
-    "featured_collection"
+    "featured_collection",
+    "features_list_MgrBxe"
   ]
 }
