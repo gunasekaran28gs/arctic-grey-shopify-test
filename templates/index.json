@@ -19,23 +19,39 @@
         "announcement_Newfgd": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "title": "High Quality Ingredients",
+            "link": ""
+          }
+        },
+        "announcement_MFbfXj": {
+          "type": "announcement",
+          "settings": {
+            "title": "Independently Certified",
+            "link": ""
+          }
+        },
+        "announcement_QciH7T": {
+          "type": "announcement",
+          "settings": {
+            "title": "Expert Driven",
+            "link": ""
+          }
+        },
+        "announcement_aGJw4H": {
+          "type": "announcement",
+          "settings": {
+            "title": "Shipped Internationally",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_Newfgd"
+        "announcement_Newfgd",
+        "announcement_MFbfXj",
+        "announcement_QciH7T",
+        "announcement_aGJw4H"
       ],
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
+      "settings": {}
     },
     "logo_EjNpKA": {
       "type": "logo",
