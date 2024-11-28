@@ -1,5 +1,5 @@
 
-    <div class="ag-features-icon-section-wrapper">
+    <div class="ag-features-icon-section-wrapper page-width">
         <div class="ag-features-icon-section-container">
             <div class="ag-features-icon-title-container">
                 <h4 class="section-subtitle">{{section.settings.subtitle}}</h4>
@@ -13,8 +13,8 @@
                             <img src="{{ block.settings.image.src |  image_url: width: 50  }}" width="" height="" alt="">
                         </div>
                         <div class="ag-features-text-container">
-                            <h4>{{ block.settings.title }}</h4>
-                            <p>{{ block.settings.description }}</p>
+                            <h4 class="column-title">{{ block.settings.title }}</h4>
+                            <p class="column-text">{{ block.settings.description }}</p>
                         </div>
                     </div>
                 {% endfor %}

@@ -102,7 +102,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
 
   .header.page-width,
@@ -3658,11 +3658,28 @@ p, h4{
 }
 .section-title{
   font-family: Rubik;
-  margin: 10px;
+  margin: 10px 0;
   font-size: 40px;
   font-weight: 600;
   color: #1B1F23;
   line-height: 47.4px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+h4.column-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 21.33px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+p.column-text{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
@@ -3713,25 +3730,7 @@ p, h4{
   justify-content: space-between;
   padding:24px 0;
 }
-.ag-goals-image-content-text h4{
-  font-family: Rubik;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  line-height: 21.33px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.ag-goals-image-content-text p{
-  font-family: Rubik;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18.96px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
+
 .ag-goals-image-arrow-circle{
   width: 37px;
   height: 37px;
@@ -3775,10 +3774,13 @@ p, h4{
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 40px 0;
 }
 .ag-features-icon-list-item{
   width: calc(25% - 25px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .ag-features-icon-container{
   width: 50px;

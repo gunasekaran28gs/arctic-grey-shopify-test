@@ -1,211 +1,118 @@
-<style>
-        .ag-goals-section-title-container{
-            padding-top: 50px;
-            padding-bottom: 30px;
-        }
-        .section-description{
-            max-width: 340px;
-            margin: 0 auto;
-            color: #1B1F23B2;
-        }
-        .ag-goals-section-image-container{
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            padding: 15px;
-        }
-        .ag-goals-image-list-item{
-            width: calc(20% - 20px);
-        }
-        .ag-goals-image-container{
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-        .ag-goals-image-container img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all .3s ease;
-        }
-        .ag-goals-image-list-item:hover .ag-goals-image-container img{
-            transform: scale(1.05);
-        }
-        .ag-goals-image-content{
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            padding:24px 0;
-        }
-        .ag-goals-image-content-text h4{
-            font-family: Rubik;
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0;
-            line-height: 21.33px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-        .ag-goals-image-content-text p{
-            font-family: Rubik;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 18.96px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-        .ag-goals-image-arrow-circle{
-            width: 37px;
-            height: 37px;
-            border: 1px solid #000;
-            border-radius: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .ag-goals-image-arrow-circle{
-            transition: rotate 0.3s ease;
-        }
-        .ag-goals-image-list-item:hover .ag-goals-image-arrow-circle{
-            rotate: 45deg;
-        }
-        .ag-goals-image-arrow-circle:hover{
-            background-color: black;
-        }
-        .ag-goals-image-arrow-circle:hover svg path{
-            fill: white;
-        } 
-        .ag-goals-section-image-container::-webkit-scrollbar {
-            display: none;
-        }
-        @media screen and (max-width: 768px){
-            .ag-goals-section-image-container{
-                justify-content: flex-start;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-            }
-            .ag-goals-image-list-item{
-                flex: 0 0 60%;
-                width: calc(20% - 20px);
-            }
-        }
-    </style>
     <div class="ag-goals-section-wrapper">
         <div class="ag-goals-section-container">
             <div class="ag-goals-section-title-container center">
-                <h4 class="section-subtitle">COMFORTABLY UNCOMFORTABLE </h4>
-                <h2 class="section-title">Start with your Goals</h2>
-                <p class="section-description">We cannot become what we want to be by remaining what we are.</p>
+                <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
+                <h2 class="section-title">{{ section.settings.title }}</h2>
+                <p class="section-description">{{ section.settings.description }}</p>
             </div>
             <div class="ag-goals-section-image-container">
-                <div class="ag-goals-image-list-item">
-                    <div class="ag-goals-image-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/athletic-performance.png?v=1732723154" alt="">
-                    </div>
-                    <div class="ag-goals-image-content">
-                        <div class="ag-goals-image-content-text">
-                            <h4>Sleep</h4>
-                            <p>Optimize your sleep patterns.</p>
+                {%for block in section.blocks%}
+                    <div class="ag-goals-image-list-item">
+                        <div class="ag-goals-image-container">
+                            {% if block.settings.image != blank%}
+                                <img src="{{ block.settings.image.src |  image_url: width: 400  }}" width="" height="" alt="{{ block.settings.image.alt }}"/>
+                            {% else %}
+                                {{ 'image' | placeholder_svg_tag }}
+                            {% endif %}
                         </div>
-                        <div class="ag-goals-image-arrow">
-                            <div class="ag-goals-image-arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
-                                </svg>
+                        <div class="ag-goals-image-content">
+                            <div class="ag-goals-image-content-text">
+                                <h4 class="column-title">{{ block.settings.title }}</h4>
+                                <p class="column-text">{{ block.settings.description }}</p>
+                            </div>
+                            <div class="ag-goals-image-arrow">
+                                <div class="ag-goals-image-arrow-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="ag-goals-image-list-item">
-                    <div class="ag-goals-image-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/athletic-performance.png?v=1732723154" alt="">
-                    </div>
-                    <div class="ag-goals-image-content">
-                        <div class="ag-goals-image-content-text">
-                            <h4>Sleep</h4>
-                            <p>Enhance your brain's performance and connectivity</p>
-                        </div>
-                        <div class="ag-goals-image-arrow">
-                            <div class="ag-goals-image-arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ag-goals-image-list-item">
-                    <div class="ag-goals-image-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/athletic-performance.png?v=1732723154" alt="">
-                    </div>
-                    <div class="ag-goals-image-content">
-                        <div class="ag-goals-image-content-text">
-                            <h4>Sleep</h4>
-                            <p>Optimize your sleep patterns.</p>
-                        </div>
-                        <div class="ag-goals-image-arrow">
-                            <div class="ag-goals-image-arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ag-goals-image-list-item">
-                    <div class="ag-goals-image-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/athletic-performance.png?v=1732723154" alt="">
-                    </div>
-                    <div class="ag-goals-image-content">
-                        <div class="ag-goals-image-content-text">
-                            <h4>Sleep</h4>
-                            <p>Optimize your sleep patterns.</p>
-                        </div>
-                        <div class="ag-goals-image-arrow">
-                            <div class="ag-goals-image-arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ag-goals-image-list-item">
-                    <div class="ag-goals-image-container">
-                        <img src="https://cdn.shopify.com/s/files/1/0906/9291/1419/files/athletic-performance.png?v=1732723154" alt="">
-                    </div>
-                    <div class="ag-goals-image-content">
-                        <div class="ag-goals-image-content-text">
-                            <h4>Sleep</h4>
-                            <p>Optimize your sleep patterns.</p>
-                        </div>
-                        <div class="ag-goals-image-arrow">
-                            <div class="ag-goals-image-arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9348 10.4127L13.4446 10.4075L13.4195 3.07962L1.91824 14.5093L0.850933 13.4486L12.3508 2.02037L4.97841 1.99405L4.97322 0.513193L13.411 0.542522L13.41 0.535134L14.9002 0.540292L14.9348 10.4127Z" fill="#1B1F23"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {%endfor%}
+
+                
             </div>
         </div>
     </div>
 
     {% schema %}
-    {
-        "name": "Deals Image",
-        "settings": [
-            
-        ],
-        "presets": [
-            {
-                "name": "Deals Image"
-            }
-        ]
-
-    }
-    {% endschema %}
+        {
+            "name": "Deals Image",
+            "tag": "section",
+            "class": "section",
+            "disabled_on": {
+                "groups": ["header", "footer"]
+            },
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "label": "Sub Heading",
+                    "default": "Sub Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Title Here"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description Text",
+                    "default": "Welcome to my shop!"
+                }
+            ],
+            "blocks": [
+                {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "image",
+                            "label": "Icon"
+                        },
+                        {
+                            "type": "text",
+                            "id": "title",
+                            "label": "Title",
+                            "default": "Title Here"
+                        },
+                        {
+                            "type": "textarea",
+                            "id": "description",
+                            "label": "Description Text",
+                            "default": "Welcome to my shop!"
+                        },
+                        {
+                            "type": "url",
+                            "id": "link",
+                            "label": "Link"
+                        }
+    
+                    ]   
+                }
+            ],
+            "presets": [
+                {
+                    "name": "Deals Image",
+                    "blocks":[
+                        {
+                            "type": "image"
+                        },
+                        {
+                            "type": "image"
+                        },
+                        {
+                            "type": "image"
+                        },
+                        {
+                            "type": "image"
+                        },
+                    ]
+                }
+            ]
+        }
+        {% endschema %}
