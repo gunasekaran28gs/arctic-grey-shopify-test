@@ -274,18 +274,28 @@
     "video_testimonial_bR3eVd": {
       "type": "video-testimonial",
       "blocks": {
-        "logo_XaTyn3": {
-          "type": "logo",
-          "settings": {}
+        "video_rLUHDh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_i4dpcd": {
+          "type": "video",
+          "settings": {
+            "product": ""
+          }
         }
       },
       "block_order": [
-        "logo_XaTyn3"
+        "video_rLUHDh",
+        "video_i4dpcd"
       ],
       "settings": {
-        "subtitle": "Sub Heading",
-        "title": "Title Here",
-        "description": "Welcome to my shop!"
+        "subtitle": "Trusted & Proven by Science",
+        "title": "Real People. Real Results.",
+        "description": "View All"
       }
     }
   },
