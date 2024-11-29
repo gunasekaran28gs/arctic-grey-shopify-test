@@ -377,5 +377,9 @@ https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
+    </script>
   </body>
 </html>
