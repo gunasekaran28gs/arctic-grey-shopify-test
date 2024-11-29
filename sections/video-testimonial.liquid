@@ -1,0 +1,202 @@
+<style> 
+    .ag-video-testimonial-container{
+        margin: 50px 0px;
+    }
+    .video-container{
+        position: relative;
+        width: 300px;
+        height: 420px;  
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    .video-container video {
+          position: absolute;
+          top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .testimonial-video-slider .slick-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.95);
+  transition: all 0.4s ease-in-out;
+}
+.testimonial-video-slider .slick-slide,
+.testimonial-video-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+  /* transform: scale(0.8, 0.8); */
+  transition: all 0.4s ease-in-out;
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.testimonial-video-slider .slick-center,
+.testimonial-video-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+    height: 500px;
+}
+.testimonial-video-slider .slick-current.slick-active .video-container{
+  height: 500px;
+}
+.testimonial-video-slider .slick-track{
+    display: flex;
+    align-items: center;
+}
+
+.slick-next, .slick-prev{
+  z-index: 5;
+}
+.slick-next{
+  right: 15px;
+}
+.slick-prev{
+  left: 15px;
+}
+.slick-next:before, .slick-prev:before{
+  color: #000;
+  font-size: 26px;
+}
+</style>
+<div class="ag-video-testimonial-wrapper">
+    <div class="ag-video-testimonial-container">
+        <div class="ag-video-testimonial-video-list testimonial-video-slider">
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+            <div class="ag-testimonial-video-items">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-product-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <script id="rendered-js" >
+$('.testimonial-video-slider').slick({
+    variableWidth: true,
+    slidesToShow: 5.2,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: true,
+        dots: false,
+        speed: 300,
+        centerPadding: '20px',
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true
+});
+</script>
+
+{% schema %}
+    {
+        "name": "Video Testimonial",
+        "tag": "section",
+        "class": "section",
+        "disabled_on": {
+            "groups": ["header", "footer"]
+        },
+        "settings": [
+            {
+                "type": "text",
+                "id": "button-text",
+                "label": "Button Text",
+                "default": "Button Text"
+            },
+            {
+                "type": "text",
+                "id": "rating-text",
+                "label": "Rating Text",
+                "default": "Rating Text"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description Text",
+                "default": "Welcome to my shop!"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "logo",
+                "name": "Logo",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Logo"
+                    }
+                ]   
+            }
+        ],
+        "presets": [
+            {
+                "name": "Video Testionial"
+                
+            }
+        ]
+    }
+    {% endschema %}
