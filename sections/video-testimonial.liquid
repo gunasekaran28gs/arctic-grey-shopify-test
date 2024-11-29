@@ -168,7 +168,7 @@
                     {% if block.settings.selected_product %}
                         {% assign product = all_products[block.settings.selected_product] %}
                     <div class="video-product-container">
-                        <img src="{{ product.featured_image.src |  image_url: width: 200  }}"  alt="">
+                        <img src="{{ product.featured_image.src |  image_url: width: 200  }}" width="" height=""  alt="">
                         <div class="product_details">
                             <h5 class="product_title">{{ product.title }}</h5>
                             <p class="product_price">{{ product.price }}</p>
@@ -255,8 +255,7 @@ $(window).resize(function(){
                     {
                         "type": "product",
                         "id": "product",
-                        "label": "Product to show",
-                        "default": ""
+                        "label": "Product to show"
                     }
                 ]   
             }
