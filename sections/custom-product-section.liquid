@@ -1,7 +1,143 @@
 <style>
-
-    </style>
-    <div class="ag-custome-product-section-wrapper">
+    .ag-customized-product-box{
+        align-items: center;
+        gap: 15px;
+    }
+    .ag-customized-product-box, .custom-product-list-item {
+        display: flex;
+        justify-content: center;
+    }
+    .ag-custom-product-image-column {
+        width: 44%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px;
+        border-radius: 8px 0px 0px 8px;
+        border: 1px solid #0000001A;
+    }
+    .ag-custom-product-image-column img{
+        width: 100%;
+    }
+    .ag-custom-product-content-column{
+        width: 66%;
+        border: 1px solid #0000001A;
+        border-radius: 0px 8px 8px 0px;
+    }
+    .product_features_box-list, .product_ingredients_box-list {
+        display: flex;
+        gap: 36px;
+        justify-content: center;
+    }
+    .product-features-box {
+        background-color: #1B1F23;
+        color: white;
+        padding: 40px 35px;
+        border-radius: 0px 8px 0px 0px;
+    }
+    .product_features_box-title{
+        color: white;
+        text-align: center;
+        margin-top: 0;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.44px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .product_features_box-list-item{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+    .icon-circle-bg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
+    .product_features_box-list-item .icon-circle-bg{
+        width: 50px;
+        height: 50px;
+        background-color: #252A2F;
+    }
+    .product_features_box-list-item .icon-circle-bg svg{
+        width: 24px;
+        height: 24px;;
+    }
+    .product_ingredients_box-list-item .icon-circle-bg{
+        width: 45px;
+        height: 45px;
+        background-color: #F6F6F5;
+    }
+    .product_ingredients_box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 40px 35px;
+    }
+    h3.product_ingredients_box-title, .product_features_box-list-item p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.33px;
+        text-align: center;
+        margin-top: 5px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .product_ingredients_box-list-item h4{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.96px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #1B1F23;
+    }
+    .product_ingredients_box-list-item p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #1B1F2399;
+    }
+    @media screen and (max-width: 768px){
+        .ag-custom-product-image-column{
+            padding: 30px;
+        }
+        .product-features-box{
+            border-radius: 0;
+        }
+        .custom-product-list-item{
+            flex-direction: column;
+        }
+        .ag-customized-product-box{
+            /* flex-direction: column; */
+        }
+        .ag-custom-product-image-column, .ag-custom-product-content-column{
+            width: 100%;
+        }
+        .ag-custom-product-content-column{
+            border-radius: 0px 8px 8px;
+        }
+        .product_features_box-list{
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .product_features_box-list-item{
+            width: calc(50% - 12px);
+        }
+        .product_features_box-list-item{
+            gap: 0;
+        }
+        .product-features-box{
+            padding: 40px 15px;
+        }
+    }
+</style>
+    <div class="ag-custome-product-section-wrapper page-width">
         <div class="ag-custom-product-section-container">
             <div class="ag-goals-section-title-container title-section center">
                 <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
@@ -9,70 +145,103 @@
                 <p class="section-description">{{ section.settings.description }}</p>
             </div>
             <div class="ag-customized-product-box">
-                <div class="ag-custom-product-image-column">
-                    <img src="https://arctic-grey-test1.myshopify.com/cdn/shop/files/GrassFedWheyProteinIsolatePowder.png" alt="">
+                <div class="slick-prev-button">
+                    <button class="slick-custom_arrows slick-prev-custom">{{'icon-arrow-left.svg' | inline_asset_content }}</button>
                 </div>
-                <div class="ag-custom-product-content-column">
-                    <div class="ag-custom-product_features_box">
-                        <h3 class="product_features_box-title">The Blend</h3>
-                        <div class="product_features_box-list">
-                            <div class="product_features_box-list-item">
-                                <div class="icon-circle-bg ">
-                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
-                                </div>
-                                <div>
-                                    <p>Whey Based</p>
-                                </div>
-                            </div>
-                            <div class="product_features_box-list-item">
-                                <div class="icon-circle-bg ">
-                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
-                                </div>
-                                <div>
-                                    <p>Whey Based</p>
-                                </div>
-                            </div>
-                            <div class="product_features_box-list-item">
-                                <div class="icon-circle-bg ">
-                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
-                                </div>
-                                <div>
-                                    <p>Whey Based</p>
-                                </div>
-                            </div>
+                <div class="custom-product-list">
+                    <div class="custom-product-list-item">
+                        <div class="ag-custom-product-image-column">
+                            <img src="https://arctic-grey-test1.myshopify.com/cdn/shop/files/GrassFedWheyProteinIsolatePowder.png" alt="">
                         </div>
-                        <div class="product_ingredients_box">
-                            <h3 class="product_ingredients_box-title">Active Ingredients</h3>
-                            <div class="product_ingredients_box-list">
-                                <div class="product_ingredients_box-list-item">
-                                    <div class="icon-circle-bg ">
-                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                        <div class="ag-custom-product-content-column">
+                            <div class="ag-custom-product_features_box">
+                                <div class="product-features-box">
+                                    <h3 class="product_features_box-title">The Blend</h3>
+                                    <div class="product_features_box-list">
+                                        <div class="product_features_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-white.svg' | inline_asset_content }}
+                                            </div>
+                                            <div>
+                                                <p>Whey Based</p>
+                                            </div>
+                                        </div>
+                                        <div class="product_features_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-white.svg' | inline_asset_content }}
+                                            </div>
+                                            <div>
+                                                <p>Whey Based</p>
+                                            </div>
+                                        </div>
+                                        <div class="product_features_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-white.svg' | inline_asset_content }}
+                                            </div>
+                                            <div>
+                                                <p>Whey Based</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4>Whey Protein Isolate</h4>
-                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
                                 </div>
-                                <div class="product_ingredients_box-list-item">
-                                    <div class="icon-circle-bg ">
-                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                <div class="product_ingredients_box">
+                                    <h3 class="product_ingredients_box-title">Active Ingredients</h3>
+                                    <div class="product_ingredients_box-list">
+                                        <div class="product_ingredients_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-black.svg' | inline_asset_content }} 
+                                            </div>
+                                            <h4>Whey Protein Isolate</h4>
+                                            <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                        </div>
+                                        <div class="product_ingredients_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-black.svg' | inline_asset_content }}
+                                            </div>
+                                            <h4>Whey Protein Isolate</h4>
+                                            <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                        </div>
+                                        <div class="product_ingredients_box-list-item">
+                                            <div class="icon-circle-bg ">
+                                                {{'icon-leaf-black.svg' | inline_asset_content }}
+                                            </div>
+                                            <h4>Whey Protein Isolate</h4>
+                                            <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                        </div>
                                     </div>
-                                    <h4>Whey Protein Isolate</h4>
-                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
-                                </div>
-                                <div class="product_ingredients_box-list-item">
-                                    <div class="icon-circle-bg ">
-                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
-                                    </div>
-                                    <h4>Whey Protein Isolate</h4>
-                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                    <button class="button button--primary">Customize This Blend</button>
                                 </div>
                             </div>
-                            <button class="button button--primary">Customize This Blend</button>
                         </div>
                     </div>
+                </div>
+                <div class="slick-next-button">
+                    <button class="slick-custom_arrows  slick-next-custom">{{'icon-arrow-right.svg' | inline_asset_content }}</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            $('.product_ingredients_box-list').slick({
+                settings: "unslick",
+                responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToScroll: 1,
+                    slideToShow: 1,
+                    autoPlay: true,
+                    dots: true,
+                    arrows: false
+                }
+                }
+            ]
+            });
+        } 
+    
+    </script>
 
     {% schema %}
         {
