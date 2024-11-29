@@ -330,6 +330,14 @@
         "title": "Real People. Real Results.",
         "description": "View All"
       }
+    },
+    "custom_product_section_kmrqEz": {
+      "type": "custom-product-section",
+      "settings": {
+        "subtitle": "Simple & Effective Ingredients",
+        "title": "Customized Protein Powder",
+        "description": ""
+      }
     }
   },
   "order": [
@@ -340,6 +348,7 @@
     "featured_collection",
     "features_list_MgrBxe",
     "hero_banner_image_cJd9Ma",
-    "video_testimonial_bR3eVd"
+    "video_testimonial_bR3eVd",
+    "custom_product_section_kmrqEz"
   ]
 }
