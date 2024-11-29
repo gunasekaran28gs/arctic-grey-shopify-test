@@ -273,9 +273,18 @@
     },
     "video_testimonial_bR3eVd": {
       "type": "video-testimonial",
+      "blocks": {
+        "logo_XaTyn3": {
+          "type": "logo",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo_XaTyn3"
+      ],
       "settings": {
-        "button-text": "Button Text",
-        "rating-text": "Rating Text",
+        "subtitle": "Sub Heading",
+        "title": "Title Here",
         "description": "Welcome to my shop!"
       }
     }
