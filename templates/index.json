@@ -281,6 +281,34 @@
             "product": "magnesium-l-threonate"
           }
         },
+        "video_dUMynb": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_pBhnDf": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_wFUGce": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_YJwCVD": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
         "video_i4dpcd": {
           "type": "video",
           "settings": {
@@ -290,6 +318,10 @@
       },
       "block_order": [
         "video_rLUHDh",
+        "video_dUMynb",
+        "video_pBhnDf",
+        "video_wFUGce",
+        "video_YJwCVD",
         "video_i4dpcd"
       ],
       "settings": {
