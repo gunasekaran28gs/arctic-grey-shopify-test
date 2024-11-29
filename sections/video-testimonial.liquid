@@ -98,6 +98,45 @@
     max-width: 700px;
     margin: 60px auto;
 }
+.video-product-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+.video-product-container img{
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+}
+.product_details .product_title{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.41px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.product_details .product_price{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.add-to-cart_plus-icon{
+    width: 32px;
+    height: 32px;
+    background-color: #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
 <div class="ag-video-testimonial-wrapper">
     <div class="ag-video-testimonial-container">
@@ -118,72 +157,35 @@
         
         
         <div class="ag-video-testimonial-video-list testimonial-video-slider">
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            {% for block in section.blocks %}
+                <div class="ag-testimonial-video-items">
+                    <div class="video-container">
+                        <video autoplay muted loop>
+                            <source src="{{block.settings.video.sources[1].url}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    {% if block.settings.selected_product %}
+                        {% assign product = all_products[block.settings.selected_product] %}
+                    <div class="video-product-container">
+                        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="">
+                        <div class="product_details">
+                            <h5 class="product_title">{{ product.title }}</h5>
+                            <p class="product_price">{{ product.price }}</p>
+                        </div>
+                        <div class="product_add-to-cart-button">
+                            <a href="{{ product.url }}">
+                                <div class="add-to-cart_plus-icon">
+                                    {{'icon-star.svg' | inline_asset_content }}
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
-                <div class="video-product-container">
+            {% endfor %}
 
-                </div>
-            </div>
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-product-container">
-
-                </div>
-            </div>
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-product-container">
-
-                </div>
-            </div>
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-product-container">
-
-                </div>
-            </div>
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-product-container">
-
-                </div>
-            </div>
-            <div class="ag-testimonial-video-items">
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://cdn.shopify.com/videos/c/o/v/4b07e48d1bbf40e782f45c77e7060820.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-product-container">
-
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -242,13 +244,19 @@ $(window).resize(function(){
         ],
         "blocks": [
             {
-                "type": "logo",
-                "name": "Logo",
+                "type": "video",
+                "name": "Video",
                 "settings": [
                     {
-                        "type": "image_picker",
-                        "id": "image",
-                        "label": "Logo"
+                    "type": "video",
+                    "id": "video",
+                    "label": "A Shopify-hosted video"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "Product to show",
+                        "default": ""
                     }
                 ]   
             }
