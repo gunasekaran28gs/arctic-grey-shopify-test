@@ -1,0 +1,129 @@
+<style>
+
+    </style>
+    <div class="ag-custome-product-section-wrapper">
+        <div class="ag-custom-product-section-container">
+            <div class="ag-goals-section-title-container title-section center">
+                <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
+                <h2 class="section-title">{{ section.settings.title }}</h2>
+                <p class="section-description">{{ section.settings.description }}</p>
+            </div>
+            <div class="ag-customized-product-box">
+                <div class="ag-custom-product-image-column">
+                    <img src="https://arctic-grey-test1.myshopify.com/cdn/shop/files/GrassFedWheyProteinIsolatePowder.png" alt="">
+                </div>
+                <div class="ag-custom-product-content-column">
+                    <div class="ag-custom-product_features_box">
+                        <h3 class="product_features_box-title">The Blend</h3>
+                        <div class="product_features_box-list">
+                            <div class="product_features_box-list-item">
+                                <div class="icon-circle-bg ">
+                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                </div>
+                                <div>
+                                    <p>Whey Based</p>
+                                </div>
+                            </div>
+                            <div class="product_features_box-list-item">
+                                <div class="icon-circle-bg ">
+                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                </div>
+                                <div>
+                                    <p>Whey Based</p>
+                                </div>
+                            </div>
+                            <div class="product_features_box-list-item">
+                                <div class="icon-circle-bg ">
+                                    <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                </div>
+                                <div>
+                                    <p>Whey Based</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_ingredients_box">
+                            <h3 class="product_ingredients_box-title">Active Ingredients</h3>
+                            <div class="product_ingredients_box-list">
+                                <div class="product_ingredients_box-list-item">
+                                    <div class="icon-circle-bg ">
+                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                    </div>
+                                    <h4>Whey Protein Isolate</h4>
+                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                </div>
+                                <div class="product_ingredients_box-list-item">
+                                    <div class="icon-circle-bg ">
+                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                    </div>
+                                    <h4>Whey Protein Isolate</h4>
+                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                </div>
+                                <div class="product_ingredients_box-list-item">
+                                    <div class="icon-circle-bg ">
+                                        <!-- {{'icon-leaf.svg' | inline_asset_content }} -->
+                                    </div>
+                                    <h4>Whey Protein Isolate</h4>
+                                    <p>Low Calorie With Virtually No Fat or Lactose, Quickly Absorbed To Maximize Muscle Building & Repair.</p>
+                                </div>
+                            </div>
+                            <button class="button button--primary">Customize This Blend</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% schema %}
+        {
+            "name": "Customized Product",
+            "tag": "section",
+            "class": "section",
+            "disabled_on": {
+                "groups": ["header", "footer"]
+            },
+            "settings": [
+                {
+                        "type": "text",
+                        "id": "subtitle",
+                        "label": "Sub Heading",
+                        "default": "Sub Heading"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Title Here"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "description",
+                        "label": "Description Text",
+                        "default": "Welcome to my shop!"
+                    }
+            ],
+            "blocks": [
+                {
+                    "type": "video",
+                    "name": "Video",
+                    "settings": [
+                        {
+                        "type": "video",
+                        "id": "video",
+                        "label": "A Shopify-hosted video"
+                        },
+                        {
+                            "type": "product",
+                            "id": "product",
+                            "label": "Product to show"
+                        }
+                    ]   
+                }
+            ],
+            "presets": [
+                {
+                    "name": "Customized Product"   
+                }
+            ]
+        }
+        {% endschema %}
