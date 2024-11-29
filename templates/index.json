@@ -270,6 +270,14 @@
         "button-text-2": "Dive Deeper",
         "link-2": ""
       }
+    },
+    "video_testimonial_bR3eVd": {
+      "type": "video-testimonial",
+      "settings": {
+        "button-text": "Button Text",
+        "rating-text": "Rating Text",
+        "description": "Welcome to my shop!"
+      }
     }
   },
   "order": [
@@ -279,6 +287,7 @@
     "deals_image_Vxe6iK",
     "featured_collection",
     "features_list_MgrBxe",
-    "hero_banner_image_cJd9Ma"
+    "hero_banner_image_cJd9Ma",
+    "video_testimonial_bR3eVd"
   ]
 }
