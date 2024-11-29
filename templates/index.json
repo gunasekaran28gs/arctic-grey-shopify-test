@@ -274,18 +274,61 @@
     "video_testimonial_bR3eVd": {
       "type": "video-testimonial",
       "blocks": {
-        "logo_XaTyn3": {
-          "type": "logo",
-          "settings": {}
+        "video_rLUHDh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_dUMynb": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-5.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_pBhnDf": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-5.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_wFUGce": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/-61dd-45dc-96ec-34c9d5e96e27.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_YJwCVD": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/-b4e0-4ff1-b497-9ddb3e7b4fc0.mp4",
+            "product": "magnesium-l-threonate"
+          }
+        },
+        "video_QKkgjb": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/figma-video-4.mp4",
+            "product": "magnesium-l-threonate"
+          }
         }
       },
       "block_order": [
-        "logo_XaTyn3"
+        "video_rLUHDh",
+        "video_dUMynb",
+        "video_pBhnDf",
+        "video_wFUGce",
+        "video_YJwCVD",
+        "video_QKkgjb"
       ],
       "settings": {
-        "subtitle": "Sub Heading",
-        "title": "Title Here",
-        "description": "Welcome to my shop!"
+        "subtitle": "Trusted & Proven by Science",
+        "title": "Real People. Real Results.",
+        "description": "View All"
       }
     }
   },
