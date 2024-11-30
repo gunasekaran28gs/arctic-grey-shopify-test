@@ -3872,10 +3872,10 @@ p.column-text{
   border-radius: 8px;
 }
 
-div#collection-template--23738443432251__featured_collection {
-  background-color: #F6F6F5;
-}
 .card-wrapper{
   background-color: white;
   border-radius: 8px;
+}
+.card--standard > .card__content {
+  padding: 10px 20px !important;
 }

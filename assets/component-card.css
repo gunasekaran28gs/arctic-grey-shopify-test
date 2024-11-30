@@ -265,8 +265,8 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
   }
 }
 
@@ -592,4 +592,15 @@
   .grid__item:nth-child(8n) .product-card-wrapper:hover .shape--blob {
     clip-path: polygon(var(--shape--blob-5));
   }
+}
+
+.card__heading.h5{
+  font-family: Rubik;
+font-size: 14px;
+font-weight: 500;
+line-height: 18.96px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
 }
