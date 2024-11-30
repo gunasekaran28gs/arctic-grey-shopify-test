@@ -374,6 +374,29 @@
   .footer-block__details-content > :first-child .list-menu__item--link {
     padding-top: 0;
   }
+  .grid--5-col-tablet .footer-block.grid__item {
+    width: calc(16.6% - var(--grid-desktop-horizontal-spacing)* 2 / 3);
+  }
+  .grid--5-col-desktop .footer-block.grid__item.footer-block--menu {
+    width: calc(13% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+    max-width: calc(13% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+  }
+  .grid--5-col-desktop .footer-block.grid__item.footer-block--menu:first-child {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .grid--5-col-desktop .footer-block.grid__item {
+      width: calc(21% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+      max-width: calc(21% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+  }
+  .grid--5-col-desktop .footer-block.grid__item.footer-block--menu {
+    width: calc(14% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+    max-width: calc(14% - var(--grid-desktop-horizontal-spacing)* 4 / 5);
+  }
+  .grid--5-col-desktop .footer-block.grid__item.footer-block--menu:first-child {
+    padding-left: 30px;
+  }
 }
 
 .footer-block-image {
@@ -505,4 +528,60 @@
       padding-left: 3rem;
     }
   }
+}
+.footer-block__heading{
+  font-size: 18px;
+        font-weight: 500;
+        line-height: 21.33px;
+        margin-top: 5px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+}
+.footer-block__brand-info h2{
+  font-family: Rubik;
+font-size: 24px;
+font-weight: 600;
+line-height: 28.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+@media (max-width: 768px) {
+  .footer-block--menu h2 { 
+    cursor: pointer; 
+    }
+  .footer-block--menu ul { 
+    max-height: 0; 
+    overflow:hidden; 
+    transition: max-height 0.5s ease-out; 
+    }
+  
+  .footer-block--menu h2:after { 
+      content: "+";
+      width: 25px;
+      float: right; 
+    }
+  .footer-block--menu.open h2:after { 
+     content: '-';
+     width: 25px;
+    }
+  
+  .footer-block--menu.open ul { 
+    height:auto; 
+    max-height: 900px; 
+    transition: max-height 0.5s ease-in !important; 
+  }
+  .footer-block__details-content {
+    margin-bottom: 1rem !important;
+  }
+}
+@media screen and (max-width: 749px) {
+  .footer-block.grid__item {
+      margin: 1.5rem 0 !important;
+  }
+  .footer__content-top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 }
