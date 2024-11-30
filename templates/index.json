@@ -212,66 +212,6 @@
         "padding_bottom": 36
       }
     },
-    "features_list_MgrBxe": {
-      "type": "features-list",
-      "blocks": {
-        "feature_n37Tqq": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/like-icon.svg",
-            "title": "We Make It Easy",
-            "description": "Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More"
-          }
-        },
-        "feature_nDz9Tn": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/leaf-icon.svg",
-            "title": "Clean & Effective",
-            "description": "Proven Ingredients, not Artificial, Crafted By Experts For Optimal Effectiveness"
-          }
-        },
-        "feature_bPQdta": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/people-icon.svg",
-            "title": "Your Free Dietitian",
-            "description": "Every Gainful Subscriber Gets Free, 1:1 Access Their Own Registered Dietitian."
-          }
-        },
-        "feature_hLKNai": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/clipboard-icon.png",
-            "title": "Made For You",
-            "description": "Performance is Personal. Personalized & Customizable Products For Your Needs, Body & Goals"
-          }
-        }
-      },
-      "block_order": [
-        "feature_n37Tqq",
-        "feature_nDz9Tn",
-        "feature_bPQdta",
-        "feature_hLKNai"
-      ],
-      "settings": {
-        "subtitle": "🧐 Why Health & Fitness",
-        "title": "Clean Supplements - <br>Made For You",
-        "description": "Welcome to my shop!"
-      }
-    },
-    "hero_banner_image_cJd9Ma": {
-      "type": "hero-banner-image",
-      "settings": {
-        "image": "shopify://shop_images/hero-banner-background.png",
-        "title": "The Next Generation is Here",
-        "description": "Innovative Engineering. Intelligent Design. Meet The Plunge All-I.",
-        "button-text-1": "Take The Plunge",
-        "link-1": "",
-        "button-text-2": "Dive Deeper",
-        "link-2": ""
-      }
-    },
     "video_testimonial_bR3eVd": {
       "type": "video-testimonial",
       "blocks": {
@@ -332,6 +272,66 @@
         "description": "View All"
       }
     },
+    "features_list_MgrBxe": {
+      "type": "features-list",
+      "blocks": {
+        "feature_n37Tqq": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/like-icon.svg",
+            "title": "We Make It Easy",
+            "description": "Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More"
+          }
+        },
+        "feature_nDz9Tn": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/leaf-icon.svg",
+            "title": "Clean & Effective",
+            "description": "Proven Ingredients, not Artificial, Crafted By Experts For Optimal Effectiveness"
+          }
+        },
+        "feature_bPQdta": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/people-icon.svg",
+            "title": "Your Free Dietitian",
+            "description": "Every Gainful Subscriber Gets Free, 1:1 Access Their Own Registered Dietitian."
+          }
+        },
+        "feature_hLKNai": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/clipboard-icon.png",
+            "title": "Made For You",
+            "description": "Performance is Personal. Personalized & Customizable Products For Your Needs, Body & Goals"
+          }
+        }
+      },
+      "block_order": [
+        "feature_n37Tqq",
+        "feature_nDz9Tn",
+        "feature_bPQdta",
+        "feature_hLKNai"
+      ],
+      "settings": {
+        "subtitle": "🧐 Why Health & Fitness",
+        "title": "Clean Supplements - <br>Made For You",
+        "description": "Welcome to my shop!"
+      }
+    },
+    "hero_banner_image_cJd9Ma": {
+      "type": "hero-banner-image",
+      "settings": {
+        "image": "shopify://shop_images/hero-banner-background.png",
+        "title": "The Next Generation is Here",
+        "description": "Innovative Engineering. Intelligent Design. Meet The Plunge All-I.",
+        "button-text-1": "Take The Plunge",
+        "link-1": "",
+        "button-text-2": "Dive Deeper",
+        "link-2": ""
+      }
+    },
     "custom_product_section_kmrqEz": {
       "type": "custom-product-section",
       "settings": {
@@ -356,8 +356,8 @@
     "deals_image_Vxe6iK",
     "featured_collection",
     "features_list_MgrBxe",
-    "hero_banner_image_cJd9Ma",
     "video_testimonial_bR3eVd",
+    "hero_banner_image_cJd9Ma",
     "custom_product_section_kmrqEz",
     "custom_blog_posts_mmyPn3"
   ]
