@@ -23,29 +23,29 @@
         "link_list_TczwT8": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "About Us",
             "menu": "footer"
           }
         },
         "link_list_qFniBq": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Support",
+            "menu": "support"
           }
         },
         "link_list_Jcie9E": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Important Link",
+            "menu": "important-link"
           }
         },
         "link_list_dkTfQJ": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Legal",
+            "menu": "legal"
           }
         },
         "text_tUYqQM": {
