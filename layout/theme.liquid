@@ -381,5 +381,23 @@ https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js
       // const observer = lozad(); // lazy loads elements with default selector as '.lozad'
       // observer.observe();
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const footerWraper = document.querySelector('.footer__blocks-wrapper');
+      const footerHeading = footerWraper.querySelectorAll('.footer-block__heading');
+
+      if (footerHeading.length > 0) {
+          footerHeading.forEach(function(collapFooter) {
+              collapFooter.addEventListener('click', function() {
+                  const parentBlock = collapFooter.closest(".footer-block--menu");
+                  if (parentBlock) {
+                      parentBlock.classList.toggle("open");
+                  }
+              });
+          });
+      }
+  });
+</script> 
   </body>
 </html>
