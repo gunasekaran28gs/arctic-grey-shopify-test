@@ -3857,3 +3857,9 @@ p.column-text{
 }
 }
 /* Hero Banner Image end */
+
+@media screen and (min-width: 750px) {
+  .grid--3-col-tablet .footer-block.grid__item {
+      width: calc(15% - var(--grid-desktop-horizontal-spacing)* 2 / 3);
+  }
+}

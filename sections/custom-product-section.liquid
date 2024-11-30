@@ -1,11 +1,19 @@
 <style>
     .ag-customized-product-box{
-        align-items: center;
-        gap: 15px;
-    }
-    .ag-customized-product-box, .custom-product-list-item {
         display: flex;
         justify-content: center;
+    }
+    .ag-custom-product-section-wrapper{
+        background-color: #0000001A;
+    }
+    .ag-custom-product-section-container {
+        padding: 40px 0;
+        
+    }
+    .custom-product-list{
+        display: flex;
+        gap: 15px;
+        align-items: center;
     }
     .ag-custom-product-image-column {
         width: 44%;
@@ -15,6 +23,7 @@
         padding: 70px;
         border-radius: 8px 0px 0px 8px;
         border: 1px solid #0000001A;
+        background-color: white;
     }
     .ag-custom-product-image-column img{
         width: 100%;
@@ -76,6 +85,7 @@
         flex-direction: column;
         gap: 12px;
         padding: 40px 35px;
+        background-color: white;
     }
     h3.product_ingredients_box-title, .product_features_box-list-item p {
         font-size: 18px;
@@ -112,12 +122,16 @@
         }
         .custom-product-list{
             flex-direction: column;
+            align-items: unset;
+        }
+        .custom-product-list-item{
+            flex-direction: column;
         }
         .ag-customized-product-box{
-            /* flex-direction: column; */
+            flex-direction: column;
         }
         .ag-custom-product-image-column, .ag-custom-product-content-column{
-            width: 100%;
+            width: 100%; 
         }
         .ag-custom-product-content-column{
             border-radius: 0px 8px 8px;
@@ -140,19 +154,19 @@
         }
     }
 </style>
-    <div class="ag-custome-product-section-wrapper page-width">
+    <div class="ag-custom-product-section-wrapper page-width">
         <div class="ag-custom-product-section-container">
             <div class="ag-goals-section-title-container title-section center">
                 <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
                 <h2 class="section-title">{{ section.settings.title }}</h2>
                 <p class="section-description">{{ section.settings.description }}</p>
             </div>
-            <div class="ag-customized-product-box">
+            <div class="custom-product-list">
                 <div class="slick-prev-button">
                     <button class="slick-custom_arrows slick-prev-custom">{{'icon-arrow-left.svg' | inline_asset_content }}</button>
                 </div>
-                <div class="custom-product-list">
-                    <div class="custom-product-list-item">
+                {% comment %} <div class="custom-product-list">{% endcomment %}
+                    <div class="ag-customized-product-box"> 
                         <div class="ag-custom-product-image-column">
                             <img src="https://arctic-grey-test1.myshopify.com/cdn/shop/files/GrassFedWheyProteinIsolatePowder.png" alt="">
                         </div>
@@ -217,12 +231,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 <div class="slick-next-button">
                     <button class="slick-custom_arrows  slick-next-custom">{{'icon-arrow-right.svg' | inline_asset_content }}</button>
                 </div>
-            </div>
-        </div>
+             </div>
+        </div> 
     </div>
 
     <script>
