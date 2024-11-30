@@ -3,6 +3,18 @@
         .ag-blog-section-wrapper a{
           text-decoration: none;
         }
+        .ag-blog-section-title-container{
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
+        .ag-blog-section-title-container div a{
+          text-decoration: underline;
+          color: black;
+        }
+
         .ag-blog-section-wrapper{
           padding-top: 50px;
           padding-bottom: 50px;
@@ -108,13 +120,29 @@
                 width: 100%;
                 padding: 15px;
             }
+            .ag-blog-section-title-container{
+              flex-direction: column;
+              gap: 0;
+            }
+            .ag-blog-section-title-container .title-section h4{
+              text-align: center;
+            }
         }
     </style>
     <div class="ag-blog-section-wrapper">
+      <div class="ag-blog-section-title-container page-width">
+        <div class="title-section">
+          <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
+          <h2 class="section-title">{{ section.settings.title }}</h2>
+        </div>
+        <div>
+          <a href="{{ section.settings.blog.url }}"><p>View All</p></a>
+        </div>
+      </div>
+        
         <div class="ag-blog-section-container page-width">
           {% for article in section.settings.blog.articles limit: section.settings.num_posts %}
             {%if forloop.index == 1%}
-            <a href="{{ article.url }}">
             <div class="featured__article">
                 <div class="featured__article-image-container cover-image">
                     <img src="{{ article.image  |  image_url: width: 700  }}" width="" height="" alt="{{ article.title }}">
@@ -123,12 +151,11 @@
                     <p>{{ section.settings.blog.title }}</p>
                     <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
                     <div class="article__details">
-                        <p class="article__author-name">{{ article.author }}</p>
+                        <p class="article__author-name">By {{ article.author }}</p>
                         <p class="article__date">{{ article.created_at |  date: '%B %d, %Y' }}</p>
                     </div>
                 </div>
             </div>
-            </a>
             {% endif %}
           {% endfor %}
             <div class="featured__article-list">
@@ -143,7 +170,7 @@
                       <p>{{ section.settings.blog.title }}</p>
                       <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
                       <div class="article__details">
-                          <p class="article__author-name">{{ article.author }}</p>
+                          <p class="article__author-name">By {{ article.author }}</p>
                           <p class="article__date">{{ article.created_at |  date: '%B %d, %Y' }}</p>
                       </div>
                     </div>
@@ -162,8 +189,14 @@
             {
               "type": "text",
               "label": "Section Title",
-              "id": "section_title",
+              "id": "title",
               "default": "Latest Blog Posts"
+            },
+            {
+              "type": "text",
+              "label": "Sub Title",
+              "id": "subtitle",
+              "default": "Blog"
             },
             {
             "type": "blog",
