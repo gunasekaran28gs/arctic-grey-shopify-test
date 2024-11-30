@@ -187,6 +187,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Featured products",
+        "subtitle": "Featured collection",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -194,7 +195,7 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
