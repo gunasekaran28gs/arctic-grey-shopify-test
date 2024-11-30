@@ -1,0 +1,60 @@
+{% assign blog = blogs['{{section.settings.blog}}'] %}
+{% assign posts = blog.articles %}
+    
+    <div class="custom-blog-list">
+      <h2>{{ settings.section_title }}</h2>
+      
+      <div class="blog-posts">
+
+        
+        {% for article in posts limit: section.settings.num_posts %}
+          <div class="blog-post">
+            <div class="blog-post-image">
+              {% if article.image %}
+                <img src="{{ article.image  |  image_url: width: 700  }}" alt="{{ post.title }}">
+              {% else %}
+                <img src="https://via.placeholder.com/300x200" alt="No image available">
+              {% endif %}
+            </div>
+            <div class="blog-post-content">
+              <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+              <p>{{ article.excerpt | truncatewords: 30 }}</p>
+              <a href="{{ article.url }}" class="read-more">Read more</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    {% schema %}
+        {
+          "name": "Custom Blog List",
+          "settings": [
+            {
+              "type": "text",
+              "label": "Section Title",
+              "id": "section_title",
+              "default": "Latest Blog Posts"
+            },
+            {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+            },
+            {
+              "type": "range",
+            "id": "post_limit",
+            "label": "Post Limit",
+            "min": 2,
+            "max": 4,
+            "step": 1,
+            "default": 3
+            }
+          ],
+          "presets": [
+            {
+              "name": "Default"
+            }
+          ]
+        }
+        {% endschema %}
