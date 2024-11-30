@@ -66,6 +66,24 @@
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
+  <div class=" title-section_slick_arrows center">
+    <div class="slick-prev-button product_slider">
+        <button class="slick-custom_arrows slick-prev-custom">{{'icon-arrow-left.svg' | inline_asset_content }}</button>
+    </div>
+    <div>
+      {%- if section.settings.title != blank -%}
+        <h4 class="section-subtitle">{{ section.settings.subtitle }}</h4>
+      {%- endif -%}
+        {%- if section.settings.title != blank -%}
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        <a><p class="section-description">View All</p></a>
+    </div>
+        
+    <div class="slick-next-button product_slider">
+        <button class="slick-custom_arrows  slick-next-custom">{{'icon-arrow-right.svg' | inline_asset_content }}</button>
+    </div>
+</div>
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -90,7 +108,7 @@
       <ul
         id="Slider-{{ section.id }}"
         data-id="{{ section.id }}"
-        class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+        class="grid product-grid product_custom-slider contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
         role="list"
         aria-label="{{ 'general.slider.name' | t }}"
       >
@@ -197,6 +215,21 @@
   </div>
 </div>
 
+<script id="rendered-js" >
+  $('.product_custom-slider').slick({
+      slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+          autoplay: false,
+          prevArrow: $(".product_slider .slick-prev-custom"),
+          nextArrow: $(".product_slider .slick-next-custom"),
+  });
+  
+  $(window).resize(function(){
+    $('.testimonial-video-slider')[0].slick.refresh();
+  });
+  </script>
+
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -211,6 +244,12 @@
       "id": "title",
       "default": "t:sections.featured-collection.settings.title.default",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle",
+      "default": "t:sections.featured-collection.settings.title.default",
+      "label": "Subtitle"
     },
     {
       "type": "select",
