@@ -3770,6 +3770,10 @@ p.column-text{
 /* Deals Image section end */
 
 /* Features list section start */
+.ag-features-icon-section-wrapper{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .ag-features-icon-list{
   display: flex;
   gap: 32px;
@@ -3800,6 +3804,10 @@ p.column-text{
 /* Features List section end */
 
 /* Hero Banner Image start */
+.ag-hero-banner-section-wrapper{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .ag-hero-banner-section-container{
   position: relative;
 }
