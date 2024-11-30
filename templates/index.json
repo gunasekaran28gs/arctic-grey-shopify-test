@@ -339,6 +339,14 @@
         "title": "Customized Protein Powder",
         "description": ""
       }
+    },
+    "custom_blog_posts_mmyPn3": {
+      "type": "custom-blog-posts",
+      "settings": {
+        "section_title": "Latest Blog Posts",
+        "blog": "balanced-diet",
+        "post_limit": 3
+      }
     }
   },
   "order": [
@@ -350,6 +358,7 @@
     "features_list_MgrBxe",
     "hero_banner_image_cJd9Ma",
     "video_testimonial_bR3eVd",
-    "custom_product_section_kmrqEz"
+    "custom_product_section_kmrqEz",
+    "custom_blog_posts_mmyPn3"
   ]
 }
