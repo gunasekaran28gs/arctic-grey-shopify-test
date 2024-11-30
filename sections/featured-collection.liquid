@@ -68,7 +68,7 @@
   >
   <div class=" title-section_slick_arrows center">
     <div class="slick-prev-button product_slider">
-        <button class="slick-custom_arrows slick-prev-custom">{{'icon-arrow-left.svg' | inline_asset_content }}</button>
+        <button class="slick-custom_arrows slick-prev-product">{{'icon-arrow-left.svg' | inline_asset_content }}</button>
     </div>
     <div>
       {%- if section.settings.title != blank -%}
@@ -81,7 +81,7 @@
     </div>
         
     <div class="slick-next-button product_slider">
-        <button class="slick-custom_arrows  slick-next-custom">{{'icon-arrow-right.svg' | inline_asset_content }}</button>
+        <button class="slick-custom_arrows  slick-next-product">{{'icon-arrow-right.svg' | inline_asset_content }}</button>
     </div>
 </div>
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
@@ -218,11 +218,10 @@
 <script id="rendered-js" >
   $('.product_custom-slider').slick({
       slidesToShow: 4,
-          slidesToScroll: 1,
           arrows: true,
           autoplay: false,
-          prevArrow: $(".product_slider .slick-prev-custom"),
-          nextArrow: $(".product_slider .slick-next-custom"),
+          prevArrow: $(".slick-prev-product"),
+          nextArrow: $(".slick-next-product"),
   });
   
   $(window).resize(function(){
