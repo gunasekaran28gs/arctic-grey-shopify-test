@@ -3918,3 +3918,50 @@ p.column-text{
   text-decoration-skip-ink: none;
   padding: 5px !important;
 }
+.card__content{
+  position: relative;
+  transition: transform 0.6s ease;
+}
+.card__content:hover {
+  transform: translateY(-10px); /* Move the card up a little on hover */
+}
+.card_product-hover-content{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom:0;
+  height: 100%;
+  padding: 20px;
+  opacity: 0;
+  background-color: white;
+  transition: opacity 0.6s ease, top 0.6s ease;
+  visibility: hidden;
+  z-index: 11111;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card-product-details--link{
+  font-family: Rubik;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.22px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #1B1F23;
+text-align: center;
+text-decoration: none;
+display: flex;
+    justify-content: center;
+}
+.product_custom-slider .slick-slide:hover .card_product-hover-content {
+  opacity: 1;
+  top: 0%;
+  bottom: 0%; /* Move the extra content up to reveal it */
+  visibility: visible;
+}
+.product_custom-slider .slick-slide:hover .custom-quick_view_button{
+  display: none;
+}
