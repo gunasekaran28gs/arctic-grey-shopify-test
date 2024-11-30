@@ -3879,3 +3879,42 @@ p.column-text{
 .card--standard > .card__content {
   padding: 10px 20px !important;
 }
+.slick-track
+{
+    display: flex !important;
+}
+.product_custom-slider .slick-slide{
+  background-color: white;
+  border-radius: 8px;
+}
+.slick-slide {
+  margin: 0 8px;
+}
+.slick-list {
+  margin: 0 -8px;
+}
+.slick-slide
+{
+  height: inherit !important;
+}
+.card_rating-quick-view{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.card_rating-quick-view .card_rating-quick-view-column{
+  width: 45%;
+}
+.custom-quick_view_button {
+  font-family: Rubik;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.41px;
+  min-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding: 5px !important;
+}
