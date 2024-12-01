@@ -11,7 +11,13 @@
   "sections": {
     "hero_video_x8h4Rx": {
       "type": "hero-video",
-      "settings": {}
+      "settings": {
+        "video": "shopify://files/videos/-f1d3-45a4-a2a8-c462f7e5812d.mp4",
+        "desktop-video-height": "100vh",
+        "title": "Great things never came from comfort zones.",
+        "button-text": "Shop Now",
+        "button-link": ""
+      }
     },
     "announcement_bar_slider_abjE4Y": {
       "type": "announcement-bar-slider",
@@ -343,7 +349,8 @@
     "custom_blog_posts_mmyPn3": {
       "type": "custom-blog-posts",
       "settings": {
-        "section_title": "Latest Blog Posts",
+        "title": "Latest Blog Posts",
+        "subtitle": "Blog",
         "blog": "balanced-diet",
         "post_limit": 3
       }
