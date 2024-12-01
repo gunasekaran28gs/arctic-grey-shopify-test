@@ -4340,3 +4340,6 @@ h3.product_ingredients_box-title, .product_features_box-list-item p {
   }
 }
 /* Customized Product Section End */
+.search-modal{
+  border-radius: 8px;
+}
