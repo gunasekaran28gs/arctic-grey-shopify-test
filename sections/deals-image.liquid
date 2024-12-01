@@ -14,7 +14,7 @@
                       >
                         <div class="ag-goals-image-container">
                             {% if block.settings.image != blank%}
-                                <img src="{{ block.settings.image.src |  image_url: width: 400  }}" width="" height="" alt="{{ block.settings.image.alt }}"/>
+                                <img class="lazy" src="{{ block.settings.image.src |  image_url: width: 400  }}" width="" height="" alt="{{ block.settings.image.alt }}"/>
                             {% else %}
                                 {{ 'image' | placeholder_svg_tag }}
                             {% endif %}

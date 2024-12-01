@@ -145,7 +145,7 @@
             {%if forloop.index == 1%}
             <div class="featured__article">
                 <div class="featured__article-image-container cover-image">
-                    <img src="{{ article.image  |  image_url: width: 700  }}" width="" height="" alt="{{ article.title }}">
+                    <img class="lazy" src="{{ article.image  |  image_url: width: 700  }}" width="" height="" alt="{{ article.title }}">
                 </div>
                 <div class="featured__article-content-container article__content-box">
                     <p>{{ section.settings.blog.title }}</p>
@@ -164,7 +164,7 @@
                   
                 <div class="featured__article-list-item">
                     <div class="featured__article-image-list cover-image">
-                      <a href="{{ article.url }}"><img src="{{ article.image  |  image_url: width: 700  }}" width="" height="" alt="{{ article.title }}"></a>
+                      <a href="{{ article.url }}"><img class="lazy" src="{{ article.image  |  image_url: width: 700  }}" width="" height="" alt="{{ article.title }}"></a>
                     </div>
                     <div class="featured__article-list-content article__content-box">
                       <p>{{ section.settings.blog.title }}</p>

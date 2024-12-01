@@ -4,7 +4,7 @@
     <div class="ag-hero-banner-section-wrapper page-width">
         <div class="ag-hero-banner-section-container">
             <div class="ag-hero-banner-image">
-                <img src="{{ section.settings.image.src |  image_url: width: 1400  }}" width="" height="" alt="{{ section.settings.image.alt }}">
+                <img class="lazy" src="{{ section.settings.image.src |  image_url: width: 1400  }}" width="" height="" alt="{{ section.settings.image.alt }}">
             </div>
             <div class="hero-banner-overlay"></div>
             <div class="ag-hero-banner-content">
