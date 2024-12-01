@@ -55,7 +55,7 @@
   <div class="ag-hero-video-container-{{ section.id }}">
     <video autoplay muted loop>
       {%if section.settings.video != blank%}
-        <source src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
+        <source class="lazy" src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
       {%  else %}
         <source src="https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4" type="video/mp4">
       {% endif %}
