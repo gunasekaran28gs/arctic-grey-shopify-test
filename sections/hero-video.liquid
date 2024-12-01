@@ -6,7 +6,7 @@
           height: {{ section.settings.desktop-video-height  }};  
           overflow: hidden;  
        }
-        .ag-hero-video-container video {
+        .ag-hero-video-container-{{ section.id }} video {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -35,7 +35,7 @@
             color: white;
         }
         @media screen and (max-width: 768px){
-            .ag-hero-video-container{
+            .ag-hero-video-container-{{ section.id }}{
                 height: 60vh;
             }
             .ag-hero-video-content {
