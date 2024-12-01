@@ -1,13 +1,11 @@
-{% stylesheet %}
-   .ag-hero-video-container-{{ section.id }} {
+
+<style>
+       .ag-hero-video-container-{{ section.id }} {
           position: relative;
           width: 100%;
           height: {{ section.settings.desktop-video-height  }};  
           overflow: hidden;  
-    }
-{% endstylesheet %}
-<style>
-       
+       }
         .ag-hero-video-container video {
           position: absolute;
           top: 50%;
@@ -105,7 +103,7 @@
               "label": "600px"
             }
           ],
-          "default": "500px"
+          "default": "100vh"
         },
         {
           "type": "text",
