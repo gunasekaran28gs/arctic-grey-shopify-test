@@ -354,6 +354,15 @@
         "blog": "balanced-diet",
         "post_limit": 3
       }
+    },
+    "custom_liquid_7D76Fm": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign freeShippingThreshold = 10000 %}\n\n{% if cart.items.size == 0 %}\n\nGet free shipping on orders above Rs. 100!\n\n{% endif %} {% if cart.items.size != 0 %} {% if cart.total_price >= freeShippingThreshold %}\n\nYou’ve got free shipping 👌\n\n{% elsif cart.total_price < freeShippingThreshold %}\n\nYou’re only {{ freeShippingThreshold | minus: cart.total_price | money }} away from free shipping.\n\n{% endif %} {% endif %}\n<style>\n.free-shipping-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background-color: #f7f7f7;\n  padding: 10px;\n  flex-direction: column; /* Added to make the text and progress bar stack vertically */\n}\n.free-shipping-text {\n  font-size: 18px;\n  margin-bottom: 10px; /* Added margin to create space between text and progress bar */\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -366,6 +375,7 @@
     "video_testimonial_bR3eVd",
     "custom_product_section_kmrqEz",
     "hero_banner_image_cJd9Ma",
-    "custom_blog_posts_mmyPn3"
+    "custom_blog_posts_mmyPn3",
+    "custom_liquid_7D76Fm"
   ]
 }
