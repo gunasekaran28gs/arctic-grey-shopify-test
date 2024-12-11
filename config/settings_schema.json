@@ -1467,12 +1467,8 @@
     ]
   },
   {
-    "name": "Shipping Bar by Foysal Ahmed",
+    "name": "Shipping Bar",
     "settings": [
-      {
-        "type": "paragraph",
-        "content": "Subscribe my channel [Foysal Ahmed](https:\/\/youtube.com\/@foysalshopifyexpert?sub_confirmation=1)"
-      },
       {
         "type": "checkbox",
         "id": "show_shipping_bar",
