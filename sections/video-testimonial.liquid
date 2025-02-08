@@ -25,6 +25,7 @@
                             <source class="lazy" src="{{block.settings.video.sources[1].url}}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
+                        {{ block.settings.video.sources[1].url | video_tag }}
                     </div>
                     {% if block.settings.product %}
                         {% assign product = all_products[block.settings.product] %}
