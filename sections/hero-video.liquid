@@ -53,14 +53,23 @@
         }
       </style>
   <div class="ag-hero-video-container-{{ section.id }}">
-    <video autoplay muted loop>
+    <!-- <video autoplay muted loop>
       {%if section.settings.video != blank%}
         <source class="lazy" src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
       {%  else %}
         <source src="https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4" type="video/mp4">
       {% endif %}
       Your browser does not support the video tag.
-    </video>
+    </video> -->
+    {{
+            section.settings.video
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: section.settings.enable_video_looping,
+              controls: false,
+              muted: true
+          }}
     <div class="ag-hero-video-content">
       <h1>{{ section.settings.title }}</h1>
       <a href="{{ section.settings.button-link }}"><button class="button button--secondary">{{ section.settings.button-text }}</button></a>
